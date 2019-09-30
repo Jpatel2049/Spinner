@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Spinner</string>
+    <string name="choose_color">Choose Color:</string>
+
+    <string-array name="colors">
+        <item>White</item>
+        <item>Silver</item>
+        <item>Gray</item>
+        <item>Black</item>
+        <item>Red</item>
+        <item>Maroon</item>
+        <item>Yellow</item>
+        <item>Olive</item>
+        <item>Lime</item>
+        <item>Green</item>
+        <item>Aqua</item>
+        <item>Teal</item>
+        <item>Blue</item>
+        <item>Navy</item>
+        <item>Fuchsia</item>
+        <item>Purple</item>
+    </string-array>
+
+</resources>
