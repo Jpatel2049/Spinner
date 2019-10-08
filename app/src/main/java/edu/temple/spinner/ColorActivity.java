@@ -6,11 +6,13 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.content.Intent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 
 public class ColorActivity extends AppCompatActivity {
+    private boolean first = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +36,15 @@ public class ColorActivity extends AppCompatActivity {
 
                view.setBackgroundColor(Color.parseColor(colorSpinner.getItemAtPosition(0).toString()));
 
-               View someView = findViewById(R.id.constraint);
+                if(first) {
+                    first = false;
+                    return;
+                }
 
-               View root = someView.getRootView();
-
-               root.setBackgroundColor(Color.parseColor(colorSpinner.getItemAtPosition(position).toString()));
-
+                Intent onspinIntent = new Intent(ColorActivity.this, CanvasActivity.class );
+                String color = colorSpinner.getItemAtPosition(position).toString();
+                onspinIntent.putExtra("Color",color);
+                startActivity(onspinIntent);
             }
 
             @Override
@@ -47,9 +52,5 @@ public class ColorActivity extends AppCompatActivity {
 
             }
         });
-
-
-
-
     }
 }
