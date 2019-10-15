@@ -1,4 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">Spinner</string>
     <string name="choose_color">Choose Color:</string>
 
@@ -21,21 +23,21 @@
     </string-array>
 
     <string-array name="display">
-        <item>White</item>
-        <item>Silver</item>
-        <item>Gray</item>
-        <item>Black</item>
-        <item>Red</item>
-        <item>Maroon</item>
-        <item>Yellow</item>
-        <item>Olive</item>
-        <item>Green</item>
-        <item>Aqua</item>
-        <item>Teal</item>
-        <item>Blue</item>
-        <item>Navy</item>
-        <item>Fuchsia</item>
-        <item>Purple</item>
+        <item>Blanco</item>
+        <item>Plata</item>
+        <item>Gris</item>
+        <item>Negro</item>
+        <item>Rojo</item>
+        <item>Granate</item>
+        <item>Amarillo</item>
+        <item>Aceituna</item>
+        <item>Verde</item>
+        <item>Agua</item>
+        <item>Verde Azulado</item>
+        <item>Azul</item>
+        <item>Azul Marino</item>
+        <item>Fucsia</item>
+        <item>Púrpura</item>
     </string-array>
 
 </resources>

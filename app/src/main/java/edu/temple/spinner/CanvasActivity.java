@@ -17,3 +17,4 @@ public class CanvasActivity extends AppCompatActivity {
         findViewById(R.id.CanvasActivity).setBackgroundColor(Color.parseColor(color));
     }
 }
+

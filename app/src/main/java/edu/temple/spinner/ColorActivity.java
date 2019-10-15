@@ -21,13 +21,14 @@ public class ColorActivity extends AppCompatActivity {
 
         final Spinner colorSpinner = (Spinner) findViewById(R.id.spinner);
 
-        ArrayAdapter<CharSequence> colorArrayAdapter =  ArrayAdapter.createFromResource(this, R.array.colors, android.R.layout.simple_spinner_item);
+        ArrayAdapter<CharSequence> colorArrayAdapter =  ArrayAdapter.createFromResource(this, R.array.display, android.R.layout.simple_spinner_item);
         colorArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         colorSpinner.setAdapter(colorArrayAdapter);
 
         String [] colorArray = getResources().getStringArray(R.array.colors);
+        String [] displayArray = getResources().getStringArray(R.array.display);
 
-        ColorAdapter adapter = new ColorAdapter(this, colorArray);
+        ColorAdapter adapter = new ColorAdapter(this, colorArray, displayArray);
         colorSpinner.setAdapter(adapter);
 
         colorSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -41,10 +42,10 @@ public class ColorActivity extends AppCompatActivity {
                     return;
                 }
 
-                Intent onspinIntent = new Intent(ColorActivity.this, CanvasActivity.class );
+                Intent onspin = new Intent(ColorActivity.this, CanvasActivity.class );
                 String color = colorSpinner.getItemAtPosition(position).toString();
-                onspinIntent.putExtra("Color",color);
-                startActivity(onspinIntent);
+                onspin.putExtra("Color",color);
+                startActivity(onspin);
             }
 
             @Override
